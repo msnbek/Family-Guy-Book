@@ -8,22 +8,23 @@
 import UIKit
 
 class SecondVC: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var jobLabelText: UILabel!
+    @IBOutlet weak var nameLabelText: UILabel!
+    
+    @IBOutlet weak var bioLabelText: UILabel!
+    var selectedFamilyGuy : FamilyGuy?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabelText.text = selectedFamilyGuy?.name
+        jobLabelText.text = selectedFamilyGuy?.job
+        imageView.image = selectedFamilyGuy?.image
+        bioLabelText.text = selectedFamilyGuy?.bio
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
